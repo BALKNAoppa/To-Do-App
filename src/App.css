@@ -33,10 +33,18 @@
     height: 38px;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .input{
     width: 280px;
     height: 40px;
+    border-radius: 6px;
+    border: 1px solid #E4E4E7;
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+    box-sizing: border-box;
 }
 #add-btn{
     width: 59px;
@@ -51,4 +59,53 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+.filter-container{
+    width: 345px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.filter{
+    width: fit-content;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    padding: 4px 12px 4px 12px;
+    border-radius: 6px;
+    color: #363636;
+}
+#add-btn{
+    width: 59px;
+    height: 40px;
+    background-color: #3C82F6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+}
+input::placeholder {
+    color: #71717A;
+    font-family: Inter;
+    font-size: 14px;
+}
+.bttm-text{
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 16.94px;
+    color: #6B7280;
+    display: flex;
+    justify-content: center;
 }
