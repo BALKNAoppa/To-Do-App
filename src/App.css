@@ -1,0 +1,54 @@
+#root {
+    padding-top: 60px;
+    background-color: #f3f5f7;
+}
+.App{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.main-container {
+    width: 377px;
+    height: 290px;
+    box-shadow:0 0 12px rgba(0, 0, 0, .16);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+
+}
+.sub-container{
+    width: 345px;
+    height: 187px;
+}
+.input-container{
+    width: 345px;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+}
+.input{
+    width: 280px;
+    height: 40px;
+}
+#add-btn{
+    width: 59px;
+    height: 40px;
+}
+.title{
+    width: 345px;
+    height: 28px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
