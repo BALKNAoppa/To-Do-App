@@ -2,16 +2,18 @@
     padding-top: 60px;
     background-color: #f3f5f7;
 }
-.App{
+
+.App {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
 }
+
 .main-container {
     width: 377px;
     height: 290px;
-    box-shadow:0 0 12px rgba(0, 0, 0, .16);
+    box-shadow: 0 0 12px rgba(0, 0, 0, .16);
     padding-top: 24px;
     padding-bottom: 24px;
     padding-left: 16px;
@@ -24,11 +26,13 @@
     box-sizing: border-box;
     position: relative;
 }
-.sub-container{
+
+.sub-container {
     width: 345px;
     height: 187px;
 }
-.input-container{
+
+.input-container {
     width: 345px;
     height: 38px;
     display: flex;
@@ -36,7 +40,8 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.input[type=text]{
+
+.input[type=text] {
     width: 280px;
     height: 40px;
     border-radius: 6px;
@@ -46,15 +51,21 @@
     padding-left: 16px;
     box-sizing: border-box;
     outline: none;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 16.96px;
 }
+
 input[type=text]:focus {
     border: 2px solid #2463EB;
 }
-#add-btn{
+
+#add-btn {
     width: 59px;
     height: 40px;
 }
-.active-button{
+
+.active-button {
     background-color: #2463EB !important;
     color: white;
     width: fit-content;
@@ -69,7 +80,8 @@ input[type=text]:focus {
     padding: 4px 12px 4px 12px;
     border-radius: 6px;
 }
-.title{
+
+.title {
     width: 345px;
     height: 28px;
     font-family: Inter;
@@ -79,16 +91,18 @@ input[type=text]:focus {
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
-.filter-container{
+
+.filter-container {
     width: 345px;
     height: 40px;
     display: flex;
     align-items: center;
     gap: 6px;
 }
-.filter{
+
+.filter {
     width: fit-content;
     height: 32px;
     display: flex;
@@ -103,7 +117,8 @@ input[type=text]:focus {
     color: #363636;
     background-color: #F3F4F6;
 }
-#add-btn{
+
+#add-btn {
     width: 59px;
     height: 40px;
     background-color: #3C82F6;
@@ -115,12 +130,14 @@ input[type=text]:focus {
     font-size: 14px;
     font-weight: 400;
 }
+
 input::placeholder {
     color: #71717A;
     font-family: Inter;
     font-size: 14px;
 }
-.bttm-text{
+
+.bttm-text {
     font-family: Inter;
     font-size: 14px;
     line-height: 16.94px;
@@ -128,7 +145,8 @@ input::placeholder {
     display: flex;
     justify-content: center;
 }
-.footer-container{
+
+.footer-container {
     width: 345px;
     height: 15px;
     display: flex;
@@ -137,34 +155,47 @@ input::placeholder {
     position: absolute;
     top: 251px;
 }
-#ftr-txt{
+
+#ftr-txt {
     font-family: Inter;
     font-weight: 400;
     font-size: 12px;
     line-height: 14.52px;
     color: #6B7280;
 }
-#clr-txt{
+
+#clr-txt {
     color: #3B73ED;
 }
+
 .checkbox-border {
+    appearance: none;
     width: 20px;
     height: 20px;
+    border: 1px solid #767676;
+    border-radius: 2px;
     cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: #f0f0f0; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-  }
-  
+    position: relative;
+}
+
 .checkbox-border:checked {
-    background-color: #2463EB;
-    border-color: #015FCC;
-  }
-.active-container{
+    background-color: #0275FF;
+    border: 2px solid #015FCC;
+}
+
+.checkbox-border:checked::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.active-container {
     width: 345px;
     height: 62px;
     padding: 16px;
@@ -172,6 +203,28 @@ input::placeholder {
     background-color: #F9FAFB;
     transition: background-color 0.3s ease;
 }
-.active-container:hover{
+
+.active-container:hover {
     background-color: whitesmoke;
 }
+.task-item {
+    width: 345px;
+    height: 62px;
+    margin-bottom: 10px; /* Space between tasks */
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #F9FAFB;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: Inter;
+    line-height: 16.94px;
+    font-weight: 400;
+    box-sizing: border-box;
+
+  }
+  .completed-task {
+    text-decoration: line-through;
+    color: black;
+  }
+  
