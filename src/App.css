@@ -18,11 +18,11 @@
     padding-right: 16px;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     background-color: #fff;
     border-radius: 8px;
-
+    box-sizing: border-box;
+    position: relative;
 }
 .sub-container{
     width: 345px;
@@ -36,7 +36,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.input{
+.input[type=text]{
     width: 280px;
     height: 40px;
     border-radius: 6px;
@@ -45,10 +45,29 @@
     padding: 0;
     padding-left: 16px;
     box-sizing: border-box;
+    outline: none;
+}
+input[type=text]:focus {
+    border: 2px solid #2463EB;
 }
 #add-btn{
     width: 59px;
     height: 40px;
+}
+.active-button{
+    background-color: #2463EB !important;
+    color: white;
+    width: fit-content;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    padding: 4px 12px 4px 12px;
+    border-radius: 6px;
 }
 .title{
     width: 345px;
@@ -60,8 +79,7 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 0;
-
+    padding: 0; 
 }
 .filter-container{
     width: 345px;
@@ -83,6 +101,7 @@
     padding: 4px 12px 4px 12px;
     border-radius: 6px;
     color: #363636;
+    background-color: #F3F4F6;
 }
 #add-btn{
     width: 59px;
@@ -108,4 +127,51 @@ input::placeholder {
     color: #6B7280;
     display: flex;
     justify-content: center;
+}
+.footer-container{
+    width: 345px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 251px;
+}
+#ftr-txt{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
+    color: #6B7280;
+}
+#clr-txt{
+    color: #3B73ED;
+}
+.checkbox-border {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+.checkbox-border:checked {
+    background-color: #2463EB;
+    border-color: #015FCC;
+  }
+.active-container{
+    width: 345px;
+    height: 62px;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: #F9FAFB;
+    transition: background-color 0.3s ease;
+}
+.active-container:hover{
+    background-color: whitesmoke;
 }
