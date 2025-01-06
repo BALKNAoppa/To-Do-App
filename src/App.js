@@ -7,13 +7,15 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [activeStyle, setActiveStyle] = useState(1);
 
+
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
+    
   };
 
   const handleAddButton = () => {
     if (inputValue.trim() === "") {
-      alert("Please enter your task.");
+      alert("Enter your fking task!");
     } else {
       setTodo((prev) => [
         ...prev,
@@ -22,6 +24,7 @@ function App() {
       setInputValue("");
     }
   };
+
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && inputValue.trim() !== "") {
@@ -33,6 +36,8 @@ function App() {
     }
   };
 
+
+  //checkbox function
   const handleCheckBox = (id) => {
     setTodo((prev) =>
       prev.map((item) =>
@@ -43,18 +48,45 @@ function App() {
     );
   };
 
+
+  //Task filter function
   const toggleStyle = (buttonId) => {
     if (buttonId !== activeStyle) {
       setActiveStyle(buttonId);
     }
   };
 
+
+  //Filter function
   const filteredTasks = todo.filter((task) => {
     if (activeStyle === 2) return task.status === "ACTIVE";
     if (activeStyle === 3) return task.status === "COMPLETED";
     return true;
   });
 
+
+  //Delete function
+  const handleDelete = (id) => {
+    const confirmDelete = window.confirm("Are you fking sure delete this shit?");
+    if (confirmDelete) {
+      setTodo((prev) => prev.filter((todo) => todo.id !== id));
+    }
+  };
+// //handleAllDelete
+//   const handleAllDelete = (status) => {
+//     const confirmAllDelete = window.confirm("Ohh! Are you fking sure delete ALL this shit")
+//     if (confirmAllDelete) {
+//     }
+//   }
+
+const maxLenght = 20;
+const inputlenght = (inputValue, maxLenght) => {
+  if (inputValue.length > maxLenght) {
+    return;
+  }
+};
+
+  //make div function
   return (
     <div className="App">
       <div className="main-container">
@@ -96,27 +128,30 @@ function App() {
           {filteredTasks.length === 0 && (
             <p className="bttm-text">No tasks yet. Add one above!</p>
           )}
+          {filteredTasks.map((todo) => (
+            <div key={todo.id} className="task-item">
+              <input
+                className="checkbox-border"
+                type="checkbox"
+                checked={todo.status === "COMPLETED"}
+                onChange={() => handleCheckBox(todo.id)}
+              />
+              <p
+                className={todo.status === "COMPLETED" ? "completed-task, text" : "text"}
+              >
+                {todo.text}
+              </p>
+              <div className="delete-container"> 
+                <button className="delete-bttn" onClick={() => handleDelete(todo.id)}>Delete</button>
+              </div>
+            </div>
+          ))}
         </div>
-        {filteredTasks.map((todo) => (
-          <div key={todo.id} className="task-item">
-            <input
-              className="checkbox-border"
-              type="checkbox"
-              checked={todo.status === "COMPLETED"}
-              onChange={() => handleCheckBox(todo.id)}
-            />
-            <span
-              className={todo.status === "COMPLETED" ? "completed-task" : ""}
-            >
-              {todo.text}
-            </span>
-          </div>
-        ))}
         <div className="footer-container">
-          <p id="ftr-txt">
-            Powered by <span id="clr-txt">Balkana Oppa</span>
-          </p>
-        </div>
+            <p id="ftr-txt">
+              Powered by <span id="clr-txt">Balkana Oppa</span>
+            </p>
+          </div>
       </div>
     </div>
   );

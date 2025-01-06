@@ -12,7 +12,7 @@
 
 .main-container {
     width: 377px;
-    height: 290px;
+    height: fit-content;
     box-shadow: 0 0 12px rgba(0, 0, 0, .16);
     padding-top: 24px;
     padding-bottom: 24px;
@@ -25,11 +25,6 @@
     border-radius: 8px;
     box-sizing: border-box;
     position: relative;
-}
-
-.sub-container {
-    width: 345px;
-    height: 187px;
 }
 
 .input-container {
@@ -152,8 +147,7 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 251px;
+    margin-top: 40px;
 }
 
 #ftr-txt {
@@ -207,10 +201,11 @@ input::placeholder {
 .active-container:hover {
     background-color: whitesmoke;
 }
+
 .task-item {
     width: 345px;
-    height: 62px;
-    margin-bottom: 10px; /* Space between tasks */
+    height: fit-content;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     padding: 5px;
@@ -221,10 +216,43 @@ input::placeholder {
     line-height: 16.94px;
     font-weight: 400;
     box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.09s ease;
+    justify-content: space-between;
+    gap: 3px;
+    margin-top: 20px;
+}
 
-  }
-  .completed-task {
+.completed-task {
     text-decoration: line-through;
     color: black;
-  }
-  
+}
+
+.text{
+    width: 70%;
+    display: flex;
+    flex-wrap:initial;
+}
+.task-item:hover {
+    background-color: #F3F4F6;
+}
+
+.delete-bttn {
+    width: 67px;
+    height: 30px;
+    border-radius: 6px;
+    padding: 6px 12px 6px 12px;
+    gap: 10px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.94px;
+    background-color: #FEF2F2;
+    color: #EF4444;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+    float: right;
+}
