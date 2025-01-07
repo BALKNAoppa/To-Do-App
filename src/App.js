@@ -149,7 +149,7 @@ const inputlenght = (inputValue, maxLenght) => {
         </div>
         <div className="footer-container">
             <p id="ftr-txt">
-              Powered by <span id="clr-txt">Balkana Oppa</span>
+              Powered by <span id="clr-txt"></span>
             </p>
           </div>
       </div>
