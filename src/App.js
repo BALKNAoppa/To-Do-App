@@ -90,6 +90,7 @@ function App() {
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
               placeholder="Add a new task..."
+              maxLength={50}
             />
             <button onClick={handleAddButton} id="add-btn">
               Add
