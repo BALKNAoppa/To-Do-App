@@ -8,6 +8,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    overflow: auto;
 }
 
 .main-container {
@@ -225,7 +226,7 @@ input::placeholder {
 
 .completed-task {
     text-decoration: line-through;
-    color: black;
+    color: black;   
 }
 
 .text{
@@ -254,5 +255,35 @@ input::placeholder {
     align-items: center;
     justify-content: end;
     cursor: pointer;
-    float: right;
+}
+.main-cmpltd-cntnr{
+    width: 345px;
+    height: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 20px;
+    border-top: 1px solid #E4E4E7;
+}
+.completed-counter-cntnr{
+    width: fit-content;
+    height: 17px;
+    color: #6B7280;
+    margin: 0;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 16.94px;
+    font-weight: 400;
+}
+.delete-all-completed-btn{
+    width: 109px;
+    height: 17px;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 16.94px;
+    color: #EF4444;
+    border: none;
+    background: none;
+    padding: 0;
+    font-weight: 400;
 }
