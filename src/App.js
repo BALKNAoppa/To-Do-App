@@ -161,7 +161,7 @@ function App() {
         </div>}
         <div className="footer-container">
           <p id="ftr-txt">
-            Powered by <span id="clr-txt">Balkana Oppa</span>
+            Powered by <a href="https://github.com/BALKNAoppa" id="clr-txt">Balkana Oppa</a>
           </p>
         </div>
       </div>

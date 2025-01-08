@@ -161,6 +161,7 @@ input::placeholder {
 
 #clr-txt {
     color: #3B73ED;
+    text-decoration: none;
 }
 
 .checkbox-border {
@@ -222,14 +223,14 @@ input::placeholder {
     justify-content: space-between;
     gap: 3px;
     margin-top: 20px;
-}
+  }
 
-.completed-task {
+  .completed-task {
     text-decoration: line-through;
-    color: black;   
-}
+    color: black;
+  }
 
-.text{
+  .text{
     width: 70%;
     display: flex;
     flex-wrap:initial;
