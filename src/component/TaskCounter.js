@@ -7,7 +7,7 @@ function TaskCounter({ completedCount, totalCount, onDeleteCompleted }) {
       <p className="completed-counter-cntnr">
         {completedCount} of {totalCount} tasks completed
       </p>
-      {completedCount > 0  && (
+      {completedCount < 30 && (
         <button
           className="delete-all-completed-btn"
           onClick={onDeleteCompleted}

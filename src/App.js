@@ -45,6 +45,8 @@ function App() {
   };
 
   const handleDeleteCompleted = () => {
+    if (!todo.filter((item)=> item.status === "COMPLETED" ).length > 0) return  alert("There is nothing to delete.")
+
     const confirmAllDelete = window.confirm(
       "Ohh! Are you fking sure you want to delete all completed tasks?"
     );
