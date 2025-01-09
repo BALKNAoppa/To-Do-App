@@ -38,7 +38,7 @@ function App() {
   });
 
   const handleDelete = (id) => {
-    const confirmDelete = window.confirm("Are you fking sure delete this shit?");
+    const confirmDelete = window.confirm("Are you certain that you will delete this task?");
     if (confirmDelete) {
       setTodo((prev) => prev.filter((todo) => todo.id !== id));
     }
@@ -48,7 +48,7 @@ function App() {
     if (!todo.filter((item)=> item.status === "COMPLETED" ).length > 0) return  alert("There is nothing to delete.")
 
     const confirmAllDelete = window.confirm(
-      "Ohh! Are you fking sure you want to delete all completed tasks?"
+      "Ohh! Are you really sure you want to delete all completed tasks?"
     );
     if (confirmAllDelete) {
       setTodo((prev) => prev.filter((task) => task.status !== "COMPLETED"));

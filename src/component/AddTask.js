@@ -7,7 +7,7 @@ function AddTask({ onAddTask }) {
 
   const handleAddTask = () => {
     if (!inputValue.trim()) {
-      alert("Enter your fking task!");
+      alert("Enter your task!");
     } else {
       onAddTask(inputValue);
       setInputValue("");
