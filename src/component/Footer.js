@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="footer-container">
       <p id="ftr-txt">
-        Powered by <a href="https://github.com/BALKNAoppa" id="clr-txt">Balkana Oppa</a>
+        Powered by <a href="https://github.com/BALKNAoppa" target="_blank" id="clr-txt">Balkana Oppa</a>
       </p>
     </div>
   );
