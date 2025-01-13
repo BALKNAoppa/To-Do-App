@@ -73,7 +73,7 @@ function App() {
 
 
   const completedCount = todo.filter((task) => task.status === "COMPLETED")
-    .length;
+    .length; 
 
     console.log(todo);
     
