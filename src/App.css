@@ -234,7 +234,7 @@ input::placeholder {
   .text{
     width: 70%;
     display: flex;
-    flex-wrap:initial;
+    overflow: auto;
 }
 .task-item:hover {
     background-color: #F3F4F6;
